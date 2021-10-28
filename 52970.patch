@@ -1,0 +1,64 @@
+Index: src/wp-admin/erase-personal-data.php
+===================================================================
+--- src/wp-admin/erase-personal-data.php	(revision 51945)
++++ src/wp-admin/erase-personal-data.php	(working copy)
+@@ -19,9 +19,9 @@
+ 		'id'      => 'overview',
+ 		'title'   => __( 'Overview' ),
+ 		'content' =>
+-					'<p>' . __( 'This screen allows you to manage requests to erase or delete personal data.' ) . '</p>' .
+-					'<p>' . __( 'Deleting, anonymizing, or forgetting all data that a business or website has collected about an individual is a requirement of many Privacy Laws around the world, and is sometimes referred to as the "Right To Be Forgotten".' ) . '</p>' .
+-					'<p>' . __( 'The tool associates data stored in WordPress by a supplied email address, including profile data and comments.' ) . '</p>' .
++					'<p>' . __( 'This screen is where you manage requests to erase or delete personal data.' ) . '</p>' .
++					'<p>' . __( 'Privacy Laws around the world require businesses and online services to delete, anonymize, or forget all the data they collect about an individual. The rights those laws enshrine are sometimes called the "Right To Be Forgotten".' ) . '</p>' .
++					'<p>' . __( 'The tool associates data stored in WordPress with a supplied email address, including profile data and comments.' ) . '</p>' .
+ 					'<p><strong>' . __( 'Note: As this tool only gathers data from WordPress and participating plugins, you may need to do more to comply with erasure requests. You should also delete any data collected by or stored with any 3rd party services used by your business or site.' ) . '</strong></p>',
+ 	)
+ );
+@@ -31,12 +31,8 @@
+ 		'id'      => 'default-data',
+ 		'title'   => __( 'Default Data' ),
+ 		'content' =>
+-					'<p>' . __( 'Personal data that is collected by WordPress and is deleted or anonymized include:' ) . '</p>' .
+-					'<p>' . __( '<strong>Profile Information</strong> &mdash; user email address, username, display name, nickname, first name, last name, description/bio, and registration date.' ) . '</p>' .
+-					'<p>' . __( '<strong>Community Events Location</strong> &mdash; The IP Address of the user which is used for the Upcoming Community Events shown in the dashboard widget.' ) . '</p>' .
+-					'<p>' . __( '<strong>Session Tokens</strong> &mdash; User login information, IP Addresses, Expiration Date, User Agent (Browser/OS), and Last Login.' ) . '</p>' .
+-					'<p>' . __( '<strong>Comments</strong> &mdash; Comments are not deleted, but user data is anonymized, including Email Address, IP Address, and User Agent (Browser/OS).' ) . '</p>' .
+-					'<p>' . __( '<strong>Media</strong> &mdash; A list of URLs for all media file uploads made by the user.' ) . '</p>',
++					'<p>' . __( 'WordPress collects a limited amount of data from logged-in users but then deletes it or anonymizes it. That data can include: ' ) . '</p>' .
++					'<p>' . __( '<strong>Comments</strong> &mdash; WordPress does not delete comments. The software does anonmyze (but <em>never</em> publishes) the associated Email Address, IP Address, and User Agent (Browser/OS).' ) . '</p>' ,
+ 	)
+ );
+ 
+Index: src/wp-admin/export-personal-data.php
+===================================================================
+--- src/wp-admin/export-personal-data.php	(revision 51945)
++++ src/wp-admin/export-personal-data.php	(working copy)
+@@ -20,8 +20,8 @@
+ 		'title'   => __( 'Overview' ),
+ 		'content' =>
+ 					'<p>' . __( 'This screen allows you to manage requests for an export of personal data.' ) . '</p>' .
+-					'<p>' . __( 'Providing an export of all data that a business or website has collected about an individual is a requirement of many Privacy Laws around the world, and is sometimes referred to as the "Right To Data Portability".' ) . '</p>' .
+-					'<p>' . __( 'The tool associates data stored in WordPress by a supplied email address, including profile data and comments.' ) . '</p>' .
++					'<p>' . __( 'Privacy Laws around the world require businesses and online services to delete, anonymize, or forget all the data they collect about an individual. The rights those laws enshrine are sometimes called the "Right To Be Forgotten".' ) . '</p>' .
++					'<p>' . __( 'The tool associates data stored in WordPress with a supplied email address, including profile data and comments.' ) . '</p>' .
+ 					'<p><strong>' . __( 'Note: As this tool only gathers data from WordPress and participating plugins, you may need to do more to comply with export requests. You should also send the requestor any data collected by or stored with any 3rd party services used by your business or site.' ) . '</strong></p>',
+ 	)
+ );
+@@ -31,12 +31,12 @@
+ 		'id'      => 'default-data',
+ 		'title'   => __( 'Default Data' ),
+ 		'content' =>
+-					'<p>' . __( 'Personal data that is collected by WordPress and is displayed in the export files include:' ) . '</p>' .
++					'<p>' . __( 'WordPress collects a limited amount of data from logged-in users that can include:' ) . '</p>' .
+ 					'<p>' . __( '<strong>Profile Information</strong> &mdash; user email address, username, display name, nickname, first name, last name, description/bio, and registration date.' ) . '</p>' .
+-					'<p>' . __( '<strong>Community Events Location</strong> &mdash; The IP Address of the user used for the Upcoming Community Events shown in the dashboard widget.' ) . '</p>' .
++					'<p>' . __( '<strong>Community Events Location</strong> &mdash; The IP Address of the user, which populates the Upcoming Community Events dashboard widget with relevant information.' ) . '</p>' .
+ 					'<p>' . __( '<strong>Session Tokens</strong> &mdash; User login information, IP Addresses, Expiration Date, User Agent (Browser/OS), and Last Login.' ) . '</p>' .
+-					'<p>' . __( '<strong>Comments</strong> &mdash; For any comments made by the user, Email Address, IP Address, User Agent (Browser/OS), Date/Time, Comment Content, and Content URL.' ) . '</p>' .
+-					'<p>' . __( '<strong>Media</strong> &mdash; A list of URLs for all media file uploads made by the user.' ) . '</p>',
++					'<p>' . __( '<strong>Comments</strong> &mdash; For user comments, Email Address, IP Address, User Agent (Browser/OS), Date/Time, Comment Content, and Content URL.' ) . '</p>' .
++					'<p>' . __( '<strong>Media</strong> &mdash; A list of URLs for media files the user uploads.' ) . '</p>',
+ 	)
+ );
+ 
